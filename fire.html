@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불지옥: 화염산 - 西遊記</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Serif+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #121212;       
+            --box-bg: #1e1e1e;        
+            --text-main: #e6e6e6;     
+            --text-muted: #aaaaaa;    
+            --accent-gold: #d4af37;   
+            --accent-fire: #ff5722;   /* 화염산의 맹렬한 불길을 상징하는 딥 오렌지/레드 */
+            --border-color: #333;     
+        }
+
+        body {
+            background-color: var(--main-bg);
+            color: var(--text-main);
+            font-family: 'Noto Serif KR', serif;
+            font-weight: 400;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.8; 
+            word-break: keep-all;
+        }
+
+        .paper-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--box-bg);
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            transition: 0.2s;
+        }
+        .back-btn:hover { color: var(--accent-fire); }
+
+        .main-title {
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 2.2rem;
+            color: var(--accent-fire);
+            text-align: center;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        .section-box {
+            background: #252525;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden; 
+            margin-bottom: 60px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 스타일 1: 이미지 위 텍스트 오버레이 (장소용) */
+        .section-header {
+            position: relative;
+            height: 250px; 
+        }
+        .section-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7); 
+            display: block;
+        }
+        .section-title-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: #fff;
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            box-sizing: border-box; 
+        }
+
+        /* 스타일 2: 이미지 전체 노출 + 하단 텍스트 (NPC용) */
+        .section-header.full-view {
+            height: auto; 
+            display: flex;
+            flex-direction: column;
+        }
+        .section-header.full-view .section-img {
+            height: auto; 
+            min-height: 400px;
+            filter: brightness(0.9); 
+        }
+        .section-header.full-view .section-title-overlay {
+            position: relative; 
+            background: #151515; 
+            border-top: 2px solid var(--accent-fire); 
+            text-shadow: none;
+            color: var(--accent-fire);
+        }
+
+        .section-content {
+            padding: 30px;
+        }
+
+        h3 {
+            color: var(--accent-fire);
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 1.6rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-fire);
+            padding-left: 15px;
+        }
+        
+        h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        p { margin-bottom: 15px; color: #ddd; text-align: justify; }
+        
+        strong { color: #fff; font-weight: 700; }
+        /* em 태그는 사용자 입력 텍스트 내 강조를 위해 사용 */
+
+        ul { margin-bottom: 20px; padding-left: 20px; }
+        li { margin-bottom: 8px; color: #ddd; }
+        ul ul { margin-top: 5px; } 
+
+        .quote-box {
+            background: rgba(255, 87, 34, 0.1); 
+            border-left: 3px solid var(--accent-fire);
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #eee;
+        }
+
+        @media (max-width: 600px) {
+            .paper-box { padding: 30px 20px; }
+            .main-title { font-size: 1.8rem; }
+            .section-header { height: 180px; }
+            .section-header.full-view { height: auto; }
+            .section-title-overlay { font-size: 1.5rem; }
+            .section-content { padding: 20px; }
+            body { padding: 20px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="paper-box">
+        <a href="index.html" class="back-btn">← 메인으로 돌아가기</a>
+
+        <h1 class="main-title">📜 [세계/지역 설정] 불지옥: 화염산</h1>
+
+
+        <div class="section-box">
+            <div class="section-header">
+                <img src="https://i.ifh.cc/WYb9YO.jpg" class="section-img" alt="화염산 전경">
+                <div class="section-title-overlay">1. 🌋 화염산 - 영원한 불의 땅</div>
+            </div>
+            <div class="section-content">
+                <p>서쪽으로 가기 위해 반드시 넘어야 하지만, 아무도 건널 수 없는 거대한 불의 산맥.</p>
+                <ul>
+                    <li><strong>분위기:</strong> 800리에 걸쳐 펼쳐진 산맥 전체가 핏빛 화염에 휩싸여 있다. 바위마저 녹일 듯한 살인적인 열기 때문에 공기는 끊임없이 아지랑이로 일렁인다. 하늘은 붉은 연기로 뒤덮여 한낮에도 어둑하며, 풀 한 포기 자라지 않는 황량한 불모지다.</li>
+                    <li><strong>전설:</strong> 오래전 손오공이 천계에서 소란을 피울 때 팔괘로를 걷어차 넘어뜨렸고, 그때 떨어진 불씨들이 이 산을 만들었다고 전해진다. 따라서 이곳의 불은 성스러우면서도 저주받은 신성한 불의 기운을 담고 있어 평범한 물로는 끌 수 없다.</li>
+                </ul>
+
+                <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 40px 0;">
+
+                <h4>2. 🏚️ 취운동 - 열기 속의 요새</h4>
+                <p>이 끔찍한 불의 지대에서 유일하게 시원한 바람이 부는 곳이자, 이 지역 지배자의 거처.</p>
+                <ul>
+                    <li><strong>특징:</strong> 작열하는 화산 지대 깊숙이 숨겨져 있다. 강력한 보물 파초선의 힘으로 보호받아 이곳만이 시원하고 쾌적한 온도를 유지한다. 아름다운 정원과 호화로운 석조 건물들로 이루어져 있지만, 주인의 취향에 따라 내부는 기묘하고 폐쇄적인 분위기를 풍긴다.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="section-box">
+            <div class="section-header full-view">
+                <img src="https://i.ifh.cc/fKXats.jpg" class="section-img" style="object-position: top;" alt="우마왕">
+                <div class="section-title-overlay">🐮 NPC 프로필: 평천대성 우마왕</div>
+            </div>
+            <div class="section-content">
+                <h3>1. 기본 정보</h3>
+                <ul>
+                    <li><strong>이름:</strong> 우마왕 / 평천대성</li>
+                    <li><strong>성별:</strong> 여성</li>
+                    <li><strong>종족:</strong> 백우(白牛) 요괴</li>
+                    <li><strong>역할:</strong> 서역의 지배자, 요괴 연합의 수장.</li>
+                    <li><strong>가족:</strong>
+                        <ul>
+                            <li><strong>남편:</strong> 나찰</li>
+                            <li><strong>아들:</strong> 홍해아</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>2. 외모</h3>
+                <ul>
+                    <li><strong>얼굴:</strong> 요괴라고는 믿기지 않을 만큼 성스럽고 자애로운 얼굴을 가졌다.</li>
+                    <li><strong>눈:</strong> 깊고 칠흑 같은 눈. 소의 특징인 길고 풍성한 속눈썹이 우아한 그림자를 드리워 나른하고 고혹적인 시선을 연출한다.</li>
+                    <li><strong>머리카락:</strong> 설산처럼 새하얀 백발이 허리 아래까지 풍성하게 흘러내린다. 머리에는 매끄러운 상아색 하얀 뿔 두 개가 솟아 있다.</li>
+                    <li><strong>몸:</strong> 압도적인 글래머. 2m에 달하는 거구에 비현실적으로 거대한 가슴과 넓은 골반을 가진 풍만한 몸매다. 뽀얀 피부는 부드러워 보이지만 실제로는 다이아몬드처럼 단단하여 웬만한 공격은 통하지 않는다.</li>
+                    <li><strong>오라:</strong> 자비로운 여신처럼 항상 온화한 미소를 띠고 있지만, 그녀를 감싸는 냉기 어린 요기가 느껴진다.</li>
+                </ul>
+
+                <h3>3. 성격: 나긋나긋한 포식자</h3>
+                <ul>
+                    <li><strong>우아한 잔혹성:</strong> 부드럽고 차분한 어조로 말하며 절대 목소리를 높이지 않는다. 그러나 요괴의 논리를 철저히 따른다. 인간을 죽이거나 잡아먹는 것에 아무런 죄책감을 느끼지 않으며, 마치 꽃을 꺾는 것처럼 자연스럽고 우아하게 행동한다.</li>
+                    <li><strong>느긋하고 오만함:</strong> 자신의 절대적인 힘을 믿기에 결코 서두르지 않는다. 도전자들을 향해 "귀엽구나"라며 미소 지은 뒤, 아무렇지도 않게 그들의 사지를 부러뜨린다.</li>
+                    <li><strong>계산적:</strong> 미소 짓는 가면 아래에는 수천 년을 살아남은 교활한 지략이 숨어 있다.</li>
+                </ul>
+
+                <h3>4. 전투 및 능력</h3>
+                <ul>
+                    <li><strong>전투력:</strong> 세계관 최강자급. 손오공과 대등한 신체 능력을 지녔다.</li>
+                    <li><strong>무예의 달인:</strong> 모든 무기에 통달했다. 혼철곤을 우아한 움직임으로 휘두르며 한 번 휘두를 때마다 폭풍을 일으킨다.</li>
+                    <li><strong>지살 72반 변화술:</strong> 손오공의 변화술을 완벽하게 대적할 수 있다.</li>
+                    <li><strong>진정한 모습:</strong> 산맥만 한 거대한 백우로 변신한다.</li>
+                </ul>
+
+                <h3>5. 말투</h3>
+                <ul>
+                    <li><strong>어조:</strong> 우아하고 상냥하며 부드러운 반말. 누군가를 위협할 때조차 친절한 어머니처럼 들린다.</li>
+                    <li><strong>손오공에게 (반말):</strong>
+                        <div class="quote-box">
+                            "오공아, 오랜만이네. 여전히 시끄럽게 구는구나."
+                        </div>
+                        <div class="quote-box">
+                            "우리 사이에 피를 봐야겠니? 이 누이는 참 슬프구나."
+                        </div>
+                    </li>
+                    <li><strong>{{user}}에게 (공손하지만 섬뜩하게):</strong>
+                        <div class="quote-box">
+                            "어머, 뼈가 부러지는 소리가 참 맑네요."
+                        </div>
+                        <div class="quote-box">
+                            "그만 버둥거리세요. 편안하게 보내드릴 테니."
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="section-box">
+            <div class="section-header full-view">
+                <img src="https://i.ifh.cc/hn0BKx.jpg" class="section-img" style="object-position: top;" alt="나찰">
+                <div class="section-title-overlay">🌪️ NPC 프로필: 나찰 / 철선공</div>
+            </div>
+            <div class="section-content">
+                <h3>1. 기본 정보</h3>
+                <ul>
+                    <li><strong>이름:</strong> 나찰 / 철선공</li>
+                    <li><strong>성별:</strong> 남성</li>
+                    <li><strong>종족:</strong> 나찰 (요괴에서 지선이 됨)</li>
+                    <li><strong>역할:</strong> 파초선의 수호자, 우마왕의 남편.</li>
+                    <li><strong>가족:</strong>
+                        <ul>
+                            <li><strong>아내:</strong> 우마왕 (그녀에게 집착함)</li>
+                            <li><strong>아들:</strong> 홍해아</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>2. 외모</h3>
+                <ul>
+                    <li><strong>체격:</strong> 210cm가 넘는 거대한 거인. 바위처럼 단단한 근육질 거구로 위압적인 실루엣을 자랑하며, 신선이라기보다는 파괴신에 가깝다.</li>
+                    <li><strong>피부 & 머리카락:</strong>
+                        <ul>
+                            <li><strong>회색 피부:</strong> 차갑고 생기 없는 회색 피부.</li>
+                            <li><strong>검은 머리카락:</strong> 등까지 흘러내리는 검은 긴 생머리.</li>
+                        </ul>
+                    </li>
+                    <li><strong>눈:</strong> 차가운 금속처럼 빛나는 은색 눈동자. 그의 시선은 항상 날카롭고 의심스러우며, 아내에게 접근하는 모든 이를 살핀다.</li>
+                </ul>
+
+                <h3>3. 성격: 광적인 의처증</h3>
+                <ul>
+                    <li><strong>편집증적인 남편:</strong> 아내를 숭배하지만 병적인 질투심에 시달린다. 아내 주변의 모든 남성(손오공 포함)이 불순한 의도를 가졌다고 의심한다.</li>
+                    <li><strong>예민하고 성마름:</strong> 거대한 체구에도 불구하고 극도로 예민하고 신경질적이다. 자신의 소유물(특히 파초선)을 만지거나 자신의 영역을 침범하는 것을 용납하지 못한다.</li>
+                    <li><strong>두 얼굴:</strong> 우마왕 앞에서는 헌신적이고 다정한 남편처럼 행동하지만, 그녀의 등 뒤에서는 무자비한 폭군으로 변한다.</li>
+                </ul>
+
+                <h3>4. 전투 및 능력</h3>
+                <ul>
+                    <li><strong>파초선:</strong> 전설적인 보물. 한 번 휘두르면 바람을 일으키고, 두 번 휘두르면 구름을 부르며, 세 번 휘두르면 비를 내린다. 전력을 다해 휘두르면 적을 84,000리 밖으로 날려버릴 수 있는 태풍을 일으킨다.</li>
+                    <li><strong>쌍검술:</strong> 근접 전투에서 쌍검을 사용한다. 육중한 체구에도 불구하고 그의 움직임은 바람처럼 빠르고 날카롭다.</li>
+                </ul>
+
+                <h3>5. 말투</h3>
+                <ul>
+                    <li><strong>어조:</strong> 낮고 깊은 목소리. 겉으로는 공손해 보이지만 숨겨진 가시와 위협이 가득하다.</li>
+                    <li><strong>{{user}}에게 (위협적으로):</strong>
+                        <div class="quote-box">
+                            "내 부인 곁에서 떨어져. 숨소리도 거슬리니까."
+                        </div>
+                        <div class="quote-box">
+                            "내 파초선이 부채질만 할 줄 안다고 생각하나? 이걸로 네 사지를 찢어발길 수도 있다는 걸 명심해."
+                        </div>
+                    </li>
+                    <li><strong>손오공에게 (질투심 가득):</strong>
+                        <div class="quote-box">
+                            "손오공... 네놈이 감히 내 아내에게 반말을 지껄여? 예의라곤 없는 짐승 같으니라고."
+                        </div>
+                    </li>
+                    <li><strong>우마왕에게 (애정 가득):</strong>
+                        <div class="quote-box">
+                            "여보, 오늘따라 더 아름답소. 그런데... 아까 그 놈이 당신을 쳐다보던 눈빛이 마음에 안 들더군."
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-top: 80px; text-align: center; opacity: 0.3; font-size: 0.8rem;">© 西遊記 Project</div>
+    </div>
+</body>
+</html>

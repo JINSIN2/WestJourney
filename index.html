@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西遊記</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Song+Myung&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #111111;
+            --text-gold: #c5a059;
+            --text-gray: #aaaaaa;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-gray);
+            font-family: 'Song Myung', serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+        a { text-decoration: none; color: inherit; } /* 링크 밑줄 제거 */
+
+        h1 {
+            font-family: 'Song Myung', serif;
+            font-size: 4.5rem;
+            color: var(--text-gold);
+            margin-bottom: 50px;
+            text-shadow: 0 0 15px rgba(197, 160, 89, 0.3);
+            letter-spacing: 5px;
+            font-weight: bold;
+        }
+        .divider { width: 40px; height: 1px; background: var(--text-gold); margin: 50px auto; opacity: 0.4; }
+        h2 {
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 1.5rem;
+            color: #ddd;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* 제자들 */
+        .disciples-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .disciple-wrapper { display: flex; flex-direction: column; align-items: center; width: 100px; }
+        .disciple-img {
+            width: 100px; height: 100px; border-radius: 50%;
+            border: 2px solid #444; object-fit: cover; background-color: #333;
+            transition: 0.3s; cursor: pointer;
+        }
+        .disciple-img:hover { border-color: var(--text-gold); transform: scale(1.05); box-shadow: 0 0 15px rgba(197, 160, 89, 0.5); }
+        .disciple-name { margin-top: 10px; color: var(--text-gold); font-weight: bold; font-size: 1rem; }
+
+        /* 아이콘 리스트 (인간계/천계) */
+        .scroll-container {
+            display: flex;
+            /* 항목이 많아지면 왼쪽 정렬로 시작하여 스크롤 유도, PC 등 공간 남으면 중앙 정렬 효과 */
+            justify-content: flex-start; 
+            gap: 12px; /* 간격 축소 */
+            padding: 10px 5px;
+            overflow-x: auto; 
+            white-space: nowrap; 
+            -webkit-overflow-scrolling: touch;
+            /* 스크롤바 숨기기 (크로스 브라우저) */
+            scrollbar-width: none; 
+            -ms-overflow-style: none; 
+        }
+        .scroll-container::-webkit-scrollbar { display: none; }
+        
+        /* 화면이 넓을 때는 중앙 정렬 */
+        @media (min-width: 800px) {
+            .scroll-container { justify-content: center; }
+        }
+
+        .icon-item {
+            min-width: 65px; /* 너비 축소 */
+            text-align: center; cursor: pointer;
+            transition: 0.2s; opacity: 0.7; 
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .icon-item:hover { opacity: 1; transform: translateY(-5px); }
+        
+        .emoji-icon {
+            font-size: 2rem; /* 이모티콘 크기 축소 */
+            margin-bottom: 8px; display: block;
+            filter: drop-shadow(0 0 5px rgba(255,255,255,0.1));
+        }
+        .item-name { font-size: 0.8rem; color: #ccc; line-height: 1.3; } /* 글자 크기 축소 */
+
+        @media (max-width: 600px) {
+            h1 { font-size: 3.5rem; }
+            /* 모바일에서는 제자 이미지도 살짝 줄임 */
+            .disciple-img { width: 80px; height: 80px; }
+            .disciple-wrapper { width: 80px; }
+            /* 모바일에서 스크롤 컨테이너 패딩 조정 */
+            .scroll-container { padding-left: 10px; padding-right: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>西遊記</h1>
+        <div class="divider"></div>
+
+        <h2>삼장법사의 제자들</h2>
+        <div class="disciples-row">
+            <a href="sun.html" class="disciple-wrapper">
+                <img src="https://i.ifh.cc/Ct5HMF.jpg" class="disciple-img" alt="손오공"> <div class="disciple-name">손오공</div>
+            </a>
+            <a href="pig.html" class="disciple-wrapper">
+                <img src="https://i.ifh.cc/SORVqo.jpg" class="disciple-img" alt="저팔계">
+                <div class="disciple-name">저팔계</div>
+            </a>
+            <a href="sha.html" class="disciple-wrapper">
+                <img src="https://i.ifh.cc/F5zMJM.jpg" class="disciple-img" alt="사오정">
+                <div class="disciple-name">사오정</div>
+            </a>
+            <a href="horse.html" class="disciple-wrapper">
+                <img src="https://i.ifh.cc/1SHtwk.jpg" class="disciple-img" alt="백룡마">
+                <div class="disciple-name">백룡마</div>
+            </a>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>인간계</h2>
+        <div class="scroll-container">
+            <a href="bosang.html" class="icon-item"><span class="emoji-icon">🐺</span><span class="item-name">보상국</span></a>
+            <a href="seoryang.html" class="icon-item"><span class="emoji-icon">🦂</span><span class="item-name">서량녀국</span></a>
+            <a href="ogye.html" class="icon-item"><span class="emoji-icon">🦁</span><span class="item-name">오계국</span></a>
+            <a href="chaji.html" class="icon-item"><span class="emoji-icon">🐯</span><span class="item-name">차지국</span></a>
+            <a href="bigu.html" class="icon-item"><span class="emoji-icon">🦊</span><span class="item-name">비구국</span></a>
+            <a href="fire.html" class="icon-item"><span class="emoji-icon">🔥</span><span class="item-name">화염산</span></a>
+            <a href="hosan.html" class="icon-item"><span class="emoji-icon">👹</span><span class="item-name">호산</span></a>
+            <a href="orae.html" class="icon-item"><span class="emoji-icon">🐒</span><span class="item-name">오래국</span></a>
+        </div>
+
+        <h2>천계 & 서천</h2>
+        <div class="scroll-container" style="justify-content: center;">
+            <a href="erlang.html" class="icon-item"><span class="emoji-icon">⚔️</span><span class="item-name">이랑진군</span></a>
+            <a href="buddha.html" class="icon-item"><span class="emoji-icon">✋</span><span class="item-name">석가여래</span></a>
+            <a href="gwan.html" class="icon-item"><span class="emoji-icon">🪷</span><span class="item-name">관세음보살</span></a>
+        </div>
+        
+        <div style="margin-top: 80px; opacity: 0.3; font-size: 0.8rem;">© 西遊記 Project</div>
+    </div>
+</body>
+</html>
