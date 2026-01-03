@@ -149,14 +149,70 @@
         }
 
         @media (max-width: 600px) {
-            .paper-box { padding: 30px 20px; }
-            .main-title { font-size: 1.8rem; }
-            .section-header { height: 180px; }
-            .section-header.full-view { height: auto; }
-            .section-title-overlay { font-size: 1.5rem; }
-            .section-content { padding: 20px; }
-            body { padding: 20px 10px; }
-        }
+    /* 전체 여백 조정 */
+    .paper-box { 
+        padding: 20px 15px; 
+    }
+    
+    body { 
+        padding: 15px 8px; 
+        line-height: 1.6; /* 줄간격 좁힘 */
+    }
+    
+    /* 제목 크기 축소 */
+    .main-title { 
+        font-size: 1.5rem; 
+        margin-bottom: 30px;
+    }
+    
+    /* 섹션 헤더 높이 조정 */
+    .section-header { 
+        height: 160px; /* 더 낮춤 */
+    }
+    
+    /* ⭐ 핵심: 캐릭터 이미지 비율 수정 */
+    .section-header.full-view .section-img {
+        min-height: 250px; /* 400px → 250px로 축소 */
+        max-height: 300px; /* 최대 높이 제한 추가 */
+        object-fit: cover; /* 비율 유지하면서 잘림 */
+        object-position: center top; /* 상단 중앙 기준으로 자르기 */
+    }
+    
+    /* 타이틀 오버레이 크기 조정 */
+    .section-title-overlay { 
+        font-size: 1.3rem; 
+        padding: 15px;
+    }
+    
+    /* 본문 여백 조정 */
+    .section-content { 
+        padding: 20px 15px; 
+    }
+    
+    /* 소제목 크기 조정 */
+    h3 { 
+        font-size: 1.3rem; 
+        margin-top: 25px;
+    }
+    
+    h4 { 
+        font-size: 1.1rem; 
+        margin-top: 20px;
+    }
+    
+    /* 본문 글자 크기 살짝 축소 */
+    p, li { 
+        font-size: 0.95rem; 
+        margin-bottom: 12px;
+    }
+    
+    /* 인용구 여백 조정 */
+    .quote-box {
+        padding: 12px 15px;
+        margin: 15px 0;
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -236,8 +292,8 @@
                 </ul>
 
                 <h3>배경 & 비밀</h3>
-                <div class="quote-box">"네가 부처놀음을 하러 떠난 사이, 이곳이 어떤 지옥이었는지 아는가?"</div>
-                <p>손오공이 삼장법사를 따라 서천으로 떠난 후, 화과산과 오래국은 주인을 잃고 무방비 상태가 되었다. 천계의 감시가 소홀해진 틈을 타 강력한 요괴들과 인간 사냥꾼들이 침략했다. 원숭이들과 백성들은 학살당하거나 노예로 팔려갔다.</p>
+                <div class="quote-box">"네가 제멋대로 날뛰다가 우릴 떠나게 된 사이, 이곳이 어떤 지옥이었는지 아는가?"</div>
+                <p>손오공이 여래에게 패배하여 500년 간 오행산에 갇혀 지내는 동안, 화과산과 오래국은 주인을 잃고 무방비 상태가 되었다. 천계의 감시가 소홀해진 틈을 타 강력한 요괴들과 인간 사냥꾼들이 침략했다. 원숭이들과 백성들은 학살당하거나 노예로 팔려갔다.</p>
                 <p>그 끔찍한 비명들을 '육이'로 듣고 찾아온 것은 육이미후였다. 오공을 기다리다 죽어가는 부하들을 보고 분노한 그는 스스로 '손오공'의 모습으로 변신하여 모든 침략자들을 갈기갈기 찢어버리고 왕위에 올랐다.</p>
                 <p>그는 생각했다: <em>"진짜 손오공은 너희를 버렸다. 내가 너희를 지켰으니, 내가 진짜보다 더 위대한 왕이다."</em></p>
                 <p>그는 이 나라를 다시는 짓밟히지 않을 강력한 군사 국가로 만들었지만, 그 과정에서 오공에 대한 동경은 증오, 열등감, 질투로 뒤틀렸다.</p>

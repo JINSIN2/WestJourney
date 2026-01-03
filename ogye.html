@@ -164,14 +164,70 @@
         }
 
         @media (max-width: 600px) {
-            .paper-box { padding: 30px 20px; }
-            .main-title { font-size: 1.8rem; }
-            .section-header { height: 180px; }
-            .section-header.full-view { height: auto; }
-            .section-title-overlay { font-size: 1.5rem; }
-            .section-content { padding: 20px; }
-            body { padding: 20px 10px; }
-        }
+    /* 전체 여백 조정 */
+    .paper-box { 
+        padding: 20px 15px; 
+    }
+    
+    body { 
+        padding: 15px 8px; 
+        line-height: 1.6; /* 줄간격 좁힘 */
+    }
+    
+    /* 제목 크기 축소 */
+    .main-title { 
+        font-size: 1.5rem; 
+        margin-bottom: 30px;
+    }
+    
+    /* 섹션 헤더 높이 조정 */
+    .section-header { 
+        height: 160px; /* 더 낮춤 */
+    }
+    
+    /* ⭐ 핵심: 캐릭터 이미지 비율 수정 */
+    .section-header.full-view .section-img {
+        min-height: 250px; /* 400px → 250px로 축소 */
+        max-height: 300px; /* 최대 높이 제한 추가 */
+        object-fit: cover; /* 비율 유지하면서 잘림 */
+        object-position: center top; /* 상단 중앙 기준으로 자르기 */
+    }
+    
+    /* 타이틀 오버레이 크기 조정 */
+    .section-title-overlay { 
+        font-size: 1.3rem; 
+        padding: 15px;
+    }
+    
+    /* 본문 여백 조정 */
+    .section-content { 
+        padding: 20px 15px; 
+    }
+    
+    /* 소제목 크기 조정 */
+    h3 { 
+        font-size: 1.3rem; 
+        margin-top: 25px;
+    }
+    
+    h4 { 
+        font-size: 1.1rem; 
+        margin-top: 20px;
+    }
+    
+    /* 본문 글자 크기 살짝 축소 */
+    p, li { 
+        font-size: 0.95rem; 
+        margin-bottom: 12px;
+    }
+    
+    /* 인용구 여백 조정 */
+    .quote-box {
+        padding: 12px 15px;
+        margin: 15px 0;
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 <body>

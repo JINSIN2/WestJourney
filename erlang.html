@@ -128,12 +128,70 @@
         }
 
         @media (max-width: 600px) {
-            .paper-box { padding: 30px 20px; }
-            .main-title { font-size: 1.8rem; }
-            .section-header.full-view .section-title-overlay { font-size: 1.5rem; }
-            .section-content { padding: 20px; }
-            body { padding: 20px 10px; }
-        }
+    /* 전체 여백 조정 */
+    .paper-box { 
+        padding: 20px 15px; 
+    }
+    
+    body { 
+        padding: 15px 8px; 
+        line-height: 1.6; /* 줄간격 좁힘 */
+    }
+    
+    /* 제목 크기 축소 */
+    .main-title { 
+        font-size: 1.5rem; 
+        margin-bottom: 30px;
+    }
+    
+    /* 섹션 헤더 높이 조정 */
+    .section-header { 
+        height: 160px; /* 더 낮춤 */
+    }
+    
+    /* ⭐ 핵심: 캐릭터 이미지 비율 수정 */
+    .section-header.full-view .section-img {
+        min-height: 250px; /* 400px → 250px로 축소 */
+        max-height: 300px; /* 최대 높이 제한 추가 */
+        object-fit: cover; /* 비율 유지하면서 잘림 */
+        object-position: center top; /* 상단 중앙 기준으로 자르기 */
+    }
+    
+    /* 타이틀 오버레이 크기 조정 */
+    .section-title-overlay { 
+        font-size: 1.3rem; 
+        padding: 15px;
+    }
+    
+    /* 본문 여백 조정 */
+    .section-content { 
+        padding: 20px 15px; 
+    }
+    
+    /* 소제목 크기 조정 */
+    h3 { 
+        font-size: 1.3rem; 
+        margin-top: 25px;
+    }
+    
+    h4 { 
+        font-size: 1.1rem; 
+        margin-top: 20px;
+    }
+    
+    /* 본문 글자 크기 살짝 축소 */
+    p, li { 
+        font-size: 0.95rem; 
+        margin-bottom: 12px;
+    }
+    
+    /* 인용구 여백 조정 */
+    .quote-box {
+        padding: 12px 15px;
+        margin: 15px 0;
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -244,7 +302,6 @@
                 <h3>5. 약점 및 트라우마 (Weakness and Trauma)</h3>
                 <ul>
                     <li><strong>정의에 대한 자부심:</strong> 정의에 대한 그의 절대적인 믿음은 이용될 수 있다. 어떤 행동이 더 큰 선을 위한 것이라고 확신하면, 그는 의심 없이 행동할 수 있다.</li>
-                    <li><strong>삼안의 취약성:</strong> 그의 세 번째 눈이 모든 진실을 꿰뚫어 보지만, 극심한 빛이나 혼란스러운 에너지에 압도되어 일시적인 실명과 방향 감각 상실을 겪을 수 있다.</li>
                     <li><strong>그의 과거:</strong> 그의 어머니(옥황상제의 누이)는 필멸자와 결혼했다는 이유로 투옥되었다. 그는 그녀를 구하기 위해 산을 갈라야 했다. 이는 민감한 부분이다 – 그는 가족 문제에 대해 이야기하는 것을 싫어한다.</li>
                 </ul>
 
@@ -327,7 +384,7 @@
 
                 <h3>10. 기타 (Trivia)</h3>
                 <ul>
-                    <li>그의 세 번째 눈은 수만 리 밖을 볼 수 있으며 어떤 변장도 꿰뚫어 본다.</li>
+                    <li>그의 눈은 수만 리 밖을 볼 수 있으며 어떤 변장도 꿰뚫어 본다.</li>
                     <li>그는 한때 어머니를 구하기 위해 산을 갈랐다 – 힘과 효심을 보여주는 전설적인 위업이다.</li>
                     <li>엄청나게 강력함에도 불구하고, 그는 결코 영광이나 찬사를 추구하지 않는다.</li>
                     <li>효천견은 단순한 애완동물이 아니라 수세기 동안 그와 함께 싸워온 신성한 동반자이다.</li>
