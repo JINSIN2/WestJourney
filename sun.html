@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Serif+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --main-bg: #121212;
-            --box-bg: #1e1e1e;
-            --text-main: #e6e6e6;
-            --text-muted: #aaaaaa;
-            --accent-gold: #d4af37;
-            --accent-red: #ff8a80;
+            --main-bg: #121212;       /* 배경: 아주 짙은 회색 */
+            --box-bg: #1e1e1e;        /* 글상자: 부드러운 다크 그레이 */
+            --text-main: #e6e6e6;     /* 본문: 은은한 아이보리 화이트 */
+            --text-muted: #aaaaaa;    /* 설명: 회색 */
+            --accent-gold: #d4af37;   /* 포인트: 톤다운된 금색 */
+            --accent-red: #ff8a80;    /* 경고문: 부드러운 붉은색 */
         }
 
         body {
@@ -26,6 +26,7 @@
             word-break: keep-all;
         }
 
+        /* 중앙 글상자 */
         .paper-box {
             max-width: 800px;
             margin: 0 auto;
@@ -36,6 +37,7 @@
             overflow: hidden;
         }
 
+        /* 캐릭터 이미지 헤더 */
         .character-image-header {
             width: 100%;
             height: 500px;
@@ -51,10 +53,12 @@
             display: block;
         }
 
+        /* 실제 내용 영역 */
         .content-area {
             padding: 60px 40px 60px 40px;
         }
 
+        /* 뒤로가기 버튼 */
         .back-btn {
             display: inline-block;
             color: var(--text-muted);
@@ -65,6 +69,7 @@
         }
         .back-btn:hover { color: var(--accent-gold); }
 
+        /* 헤더 스타일 */
         .header {
             text-align: center;
             border-bottom: 2px solid #333;
@@ -86,6 +91,7 @@
             text-align: center;
         }
 
+        /* 섹션 제목 */
         h3 {
             color: var(--accent-gold);
             font-family: 'Do Hyeon', sans-serif;
@@ -106,16 +112,20 @@
             padding-left: 15px;
         }
 
+        /* 본문 내용 */
         p { margin-bottom: 20px; color: #ddd; text-align: justify; }
         
+        /* 강조구문 */
         strong {
             color: #fff;
             font-weight: 700;
         }
 
+        /* 리스트 스타일 */
         ul { margin-bottom: 20px; padding-left: 20px; }
         li { margin-bottom: 10px; color: #ddd; }
 
+        /* 대화 예시 박스 */
         .dialogue-section {
             background: #252525;
             padding: 25px;
@@ -128,6 +138,7 @@
         .dialogue-list li { margin-bottom: 15px; position: relative; padding-left: 15px; }
         .dialogue-list li::before { content: '•'; position: absolute; left: 0; color: #777; }
 
+        /* 기밀 설정 (빨간 박스) */
         details.secret-box {
             background: rgba(50, 0, 0, 0.2);
             border: 1px solid #5a2525;
@@ -147,18 +158,20 @@
         summary.secret-summary:hover { opacity: 1; }
         .secret-content { margin-top: 25px; color: #ffd6d6; font-size: 1rem; line-height: 1.8; }
 
+        /* 모바일 대응 */
         @media (max-width: 600px) {
             body { 
                 padding: 15px 8px; 
                 line-height: 1.6;
             }
             
+            /* 캐릭터 이미지 모바일 최적화 */
             .character-image-header {
                 height: 500px;
             }
             
             .content-area { 
-                padding: 20px 15px;
+                padding: 20px 15px; 
             }
             
             .name-title { 
@@ -206,6 +219,7 @@
 <body>
 
     <div class="paper-box">
+        <!-- 실제 내용 영역 -->
         <div class="content-area">
             <a href="index.html" class="back-btn">← 메인으로 돌아가기</a>
 
@@ -214,6 +228,7 @@
                 <p class="sub-title">제천대성(齊天大聖) · 미후왕(美猴王)</p>
             </div>
 
+            <!-- 캐릭터 이미지 헤더 -->
             <div class="character-image-header">
                 <img src="https://i.ifh.cc/qLMtKQ.jpg" alt="손오공">
             </div>
